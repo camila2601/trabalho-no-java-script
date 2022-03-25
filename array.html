@@ -5,35 +5,49 @@
 
     <script>
 
-      
-      
-
        let teste = [
 
        [{x:10,y:20},{x:21,y:15},{x:6,y:8}],
        [{x:12,y:9},{x:5,y:14}],
        [{x:13,y:21}]
-
-
        ];
     
-    for(let i = 0; i < 1; i++){
-      console.log(teste[i]);
+      function exibeElementos(ponto) {
+         console.log(ponto.x + "," + ponto.y);
+      }
+
+       function exibeArray(array1){
+       console.log("---------");
+       array1.forEach(exibeElementos);
+       }
+
+      console.log("-------");
+    console.log("FOR");
+    console.log("-------");
+    for(let i = 0; i < teste.length; i++) {
       console.log("-----------");
-
-    for(let i = 1; (i < 2) && (i > 0);i++){
-      console.log(teste[i]);}  console.log("----------");
-
-       for(let i = 2; i > 1; i--){
-      console.log(teste[i]);
-        } console.log("-------");
+      for(let j = 0; j < teste[i].length; j++){
+        console.log(teste[i][j].x + "," + teste[i][j].y); 
+      }
+      
       
     }
-   
 
-    
+    console.log("-------");
+    console.log("FOR OF");
+    console.log("-------");
+    for(let array1 of teste){
+      console.log("--------");
+      for(let ponto of array1){
+         console.log(ponto.x + "," + ponto.y);
+      }
+    }
 
-   
+    console.log("-------");
+    console.log("FOR EACH");
+    console.log("-------");
+
+    teste.forEach(exibeArray);
 
     </script>
    </head>
